@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud Vital - Registro</title>
+</head>
+<body style="margin:0; font-family:Arial, sans-serif; background-image:url('/Imagenes/vegetales.png'); background-size:cover; background-attachment:fixed;">
+
+    <!-- ENCABEZADO -->
+    <header style="background-color:rgb(76,175,120); color:rgb(255,255,255); text-align:center; padding:20px;">
+        <h1>Salud Vital</h1>
+        <p>Información para cuidar tu salud y bienestar</p>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav style="background-color:rgb(46,125,50); text-align:center; padding:15px;">
+        <a href="HOME.html" style="color:rgb(255,255,255); font-weight:bold; text-decoration:none; margin:10px;">Home</a>
+        <a href="BLOG.html" style="color:rgb(255,255,255); font-weight:bold; text-decoration:none; margin:10px;">Blog</a>
+        <a href="REGISTRO.html" style="color:rgb(255,255,255); font-weight:bold; text-decoration:none; margin:10px;">Registro</a>
+        <a href="CONTACTANOS.html" style="color:rgb(255,255,255); font-weight:bold; text-decoration:none; margin:10px;">Contáctanos</a>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <section style="background-color:rgb(255,255,255); border:4px solid rgb(255,152,0); width:80%; margin:30px auto; padding:25px;">
+
+        <h2 style="color:rgb(46,125,50); text-align:center;">Registro de usuario</h2>
+        <p style="text-align:center;">Completa el siguiente formulario con tus datos y hábitos de alimentación.</p>
+
+        <form>
+            <label for="nombre"><b>Nombre completo:</b></label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre completo" style="width:95%; padding:10px; margin:8px 0 15px;"><br>
+
+            <label for="fecha"><b>Fecha de nacimiento:</b></label><br>
+            <input type="date" id="fecha" name="fecha" style="padding:10px; margin:8px 0 15px;"><br>
+
+            <label for="correo"><b>Correo electrónico:</b></label><br>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" style="width:95%; padding:10px; margin:8px 0 15px;"><br>
+
+            <label for="telefono"><b>Número telefónico:</b></label><br>
+            <input type="tel" id="telefono" name="telefono" placeholder="0000-0000" pattern="[0-9]{4}-[0-9]{4}" style="width:95%; padding:10px; margin:8px 0 15px;"><br>
+
+            <label><b>Género:</b></label><br>
+            <input type="radio" id="masculino" name="genero" value="Masculino"><label for="masculino">Masculino</label>
+            <input type="radio" id="femenino" name="genero" value="Femenino"><label for="femenino">Femenino</label>
+            <input type="radio" id="otro" name="genero" value="Otro"><label for="otro">Otro</label><br><br>
+
+            <label for="direccion"><b>Dirección:</b></label><br>
+            <input type="text" id="direccion" name="direccion" placeholder="Escriba su dirección" style="width:95%; padding:10px; margin:8px 0 15px;"><br>
+
+            <label for="peso"><b>Peso (kg):</b></label><br>
+            <input type="number" id="peso" name="peso" placeholder="Ejemplo: 65" style="padding:10px; margin:8px 0 15px;"><br>
+
+            <label for="altura"><b>Altura (cm):</b></label><br>
+            <input type="number" id="altura" name="altura" placeholder="Ejemplo: 170" style="padding:10px; margin:8px 0 15px;"><br>
+
+            <label for="actividad"><b>Nivel de actividad física:</b></label><br>
+            <select id="actividad" name="actividad" style="padding:10px; margin:8px 0 15px;">
+                <option value="">Seleccione una opción</option>
+                <option value="sedentario">Sedentario</option>
+                <option value="ligero">Ligero</option>
+                <option value="moderado">Moderado</option>
+                <option value="intenso">Intenso</option>
+            </select><br>
+
+            <label><b>Objetivo nutricional:</b></label><br>
+            <input type="checkbox" id="perder" name="objetivo" value="Perder peso"><label for="perder">Perder peso</label><br>
+            <input type="checkbox" id="masa" name="objetivo" value="Ganar masa muscular"><label for="masa">Ganar masa muscular</label><br>
+            <input type="checkbox" id="salud" name="objetivo" value="Mejorar la salud"><label for="salud">Mejorar la salud</label><br><br>
+
+            <label for="alergias"><b>Alergias o restricciones alimentarias:</b></label><br>
+            <textarea id="alergias" name="alergias" placeholder="Escriba sus alergias o restricciones alimentarias" rows="5" style="width:95%; padding:10px; margin:8px 0 15px;"></textarea><br>
+
+            <label for="agua"><b>Cantidad diaria de agua consumida:</b></label><br>
+            <input type="range" id="agua" name="agua" min="0" max="5" step="0.1" value="0" oninput="cantidadAgua.value = agua.value + ' litros'" style="width:300px;">
+            <output id="cantidadAgua">0 litros</output><br><br>
+
+            <label for="foto"><b>Foto de alimentos comunes:</b></label><br>
+            <input type="file" id="foto" name="foto" accept="image/*" style="margin:8px 0 15px;"><br>
+
+            <label for="hora"><b>Hora habitual de la comida principal:</b></label><br>
+            <input type="time" id="hora" name="hora" style="padding:10px; margin:8px 0 20px;"><br><br>
+
+            <input type="submit" value="Registrarse" style="background-color:rgb(76,175,120); color:rgb(255,255,255); border:none; padding:12px 25px; font-weight:bold;">
+            <input type="reset" value="Limpiar" style="background-color:rgb(46,125,50); color:rgb(255,255,255); border:none; padding:12px 25px; font-weight:bold; margin-left:10px;">
+        </form>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer style="background-color:rgb(46,125,50); color:rgb(255,255,255); text-align:center; padding:20px;">
+        <p>Salud Vital - Todos los derechos reservados</p>
+        <a href="#" style="color:rgb(255,255,255); font-weight:bold; text-decoration:none; margin:10px;">Preguntas frecuentes</a>
+        <a href="#" style="color:rgb(255,255,255); font-weight:bold; text-decoration:none; margin:10px;">Privacidad</a>
+        <a href="CONTACTANOS.html" style="color:rgb(255,255,255); font-weight:bold; text-decoration:none; margin:10px;">Contacto</a>
+        <br><br>
+        <label for="idioma">Idioma:</label>
+        <select id="idioma">
+            <option>Español</option>
+            <option>Inglés</option>
+        </select>
+    </footer>
+
+</body>
+</html>
